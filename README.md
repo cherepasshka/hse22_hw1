@@ -68,17 +68,31 @@ multiqc -o multiqc_trimmed fastqc_trimmed
 time platanus assemble -o Poil -f paired_end_R1.fastq.trimmed paired_end_R2.fastq.trimmed 2> contigues.log
 ```
 
+Анализ полученных контигов:
+
+![image](https://user-images.githubusercontent.com/50082204/193627051-e594b493-dd6b-4af6-ae8c-e3acd9e05f29.png)
+
+
 Собираю скаффолды из контигов и подрезанных чтений с помощью “platanus scaffold”:
 
 ```bash
 time platanus scaffold -o Poil -c Poil_contig.fa -IP1 paired_end_R1.fastq.trimmed paired_end_R2.fastq.trimmed -OP2 mate_pairs_R1.fastq.int_trimmed mate_pairs_R2.fastq.int_trimmed 2> scaffolds.log
 ```
 
+Анализ полученных скаффолдов:
+
+![image](https://user-images.githubusercontent.com/50082204/193629341-7c245ffe-14af-414a-81e8-7085ea7fffcd.png)
+
+
 Уменьшаю количество гэпов с помощью подрезанных чтений программой “platanus gap_close”:
 
 ```bash
 time platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 paired_end_R1.fastq.trimmed paired_end_R2.fastq.trimmed -OP2 mate_pairs_R1.fastq.int_trimmed mate_pairs_R2.fastq.int_trimmed 2> gapclose.log
 ```
+
+Информация по гэпам после уменьшения их количества:
+
+![image](https://user-images.githubusercontent.com/50082204/193629512-9090df84-ff65-4bbe-8fcd-cbf4dbeb78a9.png)
 
 
 Удаляю исходные и с подрезанными чтениями файлы *.fastq:
