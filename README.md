@@ -31,8 +31,10 @@ multiqc -o multiqc fastqc
 ```
 
 ![image](https://user-images.githubusercontent.com/50082204/193601037-8a725411-e29c-4296-a43b-cbcbe13de2ec.png)
+![image](https://user-images.githubusercontent.com/50082204/193631717-aa772f2b-261a-4068-93ff-88c61862ac8e.png)
 ![image](https://user-images.githubusercontent.com/50082204/193601831-35c7b1d2-dbe6-4149-a498-0ec3706930af.png)
 ![image](https://user-images.githubusercontent.com/50082204/193601566-28b5ce94-b9e2-49af-90de-6d30373b5c14.png)
+![image](https://user-images.githubusercontent.com/50082204/193631828-559e2334-077f-4cdf-8780-201308433d74.png)
 
 
 Подрезаю чтения по качеству:
@@ -58,8 +60,10 @@ multiqc -o multiqc_trimmed fastqc_trimmed
 ```
 
 ![image](https://user-images.githubusercontent.com/50082204/193602170-5929b659-bb69-4a74-b86f-c596d4528c70.png)
+![image](https://user-images.githubusercontent.com/50082204/193631981-522553f8-7597-4861-a595-797c681fb955.png)
 ![image](https://user-images.githubusercontent.com/50082204/193602271-9d1d0401-3000-4a66-99ad-22df65d7c632.png)
 ![image](https://user-images.githubusercontent.com/50082204/193602388-efe730fd-b782-4976-b2e6-a71766c96461.png)
+![image](https://user-images.githubusercontent.com/50082204/193632060-b2193d0d-4c6f-4067-986c-42c02b276f49.png)
 
 
 Собираю контиги из подрезанных чтений с помощью “platanus assemble”:
